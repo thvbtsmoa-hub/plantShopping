@@ -250,3 +250,33 @@ body {
         text-align: center; /* Align text to the center */
       }
   }
+
+.plant-card img {
+    width: 180px;        /* tamaño más pequeño */
+    height: 180px;       /* cuadrado y uniforme */
+    object-fit: cover;   /* recorta sin deformar */
+    border-radius: 12px; /* esquinas redondeadas */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* sombra suave */
+    margin-bottom: 10px;
+}
+
+.plant-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.plant-card:hover {
+    transform: scale(1.05);
+}
+
+.plants-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
