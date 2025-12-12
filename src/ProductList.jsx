@@ -353,7 +353,9 @@ function ProductList({ onHomeClick }) {
                         <div key={index} className="category-section">
                             <h2>{category.category}</h2>
                             <div className="product-list">
-                                {category.plants.map((plant, idx) => {
+                                {category.plants.map((plant, idx) =>{
+                                const items = useSelector((state) => state.cart.items);
+                                const isInCart = items.some((item) => item.id === plant.id);
 
 
                                 <div key={idx} className="product-card">
@@ -370,7 +372,7 @@ function ProductList({ onHomeClick }) {
                                             {isInCart ? "Añadido" : "Agregar al carrito"}
                                         </button>
                                     </div>
-                                })}
+                               })}
                             </div>
                                 
 
