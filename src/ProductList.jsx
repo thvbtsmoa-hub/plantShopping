@@ -325,9 +325,7 @@ function ProductList({ onHomeClick }) {
         dispatch(addItem(plant));
     };
 
-
-   
-
+    const isInCart = items.some((item) => item.id === plant.id);
 
 
     return (
@@ -355,10 +353,10 @@ function ProductList({ onHomeClick }) {
                     {plantsArray.map((category, index) => (
                         <div key={index} className="category-section">
                             <h2>{category.category}</h2>
-
-
                             <div className="product-list">
                                 {category.plants.map((plant, idx) => (
+                                
+                            
 
                                     <div key={idx} className="product-card">
                                         <img className="product-image" src={plant.image} alt={plant.name} />
