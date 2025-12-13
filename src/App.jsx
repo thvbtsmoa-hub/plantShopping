@@ -20,7 +20,7 @@ function App() {
             <div className="divider"></div>
             <p>Where Green Meets Serenity</p>
 
-            <Link to="/product">
+            <Link to="/ProductList.jsx">
             <button className="get-started-button">
               Get Started
             </button> </Link>
