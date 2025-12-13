@@ -8,13 +8,14 @@ import CartItem from './CartItem';
 import NotFound from './NotFound.jsx'
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import ProductList from './ProductList';
+import Header from './Header.jsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-      
+      <Header />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/products" element={<ProductList />} />
