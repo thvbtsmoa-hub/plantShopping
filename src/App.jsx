@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import  './ProductList';
+import ProductList from './ProductList';
 import './App.css';
 import AboutUs from './AboutUs';
 import {Link} from 'react-router-dom';
