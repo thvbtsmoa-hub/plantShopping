@@ -356,7 +356,7 @@ function ProductList({ onHomeClick }) {
                                 const items = useSelector((state) => state.cart.items);
                                 const isInCart = items.some((item) => item.id === plant.id);
                                 
-                               return   <div key={idx} className="product-card">
+                               return (  <div key={idx} className="product-card">
                                         <img className="product-image" src={plant.image} alt={plant.name} />
                                         <h3 className="product-title">{plant.name}</h3>
                                         <p className="desc">{plant.description}</p>
@@ -369,7 +369,7 @@ function ProductList({ onHomeClick }) {
                                         >
                                             {isInCart ? "Añadido" : "Agregar al carrito"}
                                         </button>
-                                    </div>
+                                    </div>)
                                })}
                             </div>
                                 
@@ -381,6 +381,7 @@ function ProductList({ onHomeClick }) {
 
             ) : (
                 <CartItem onContinueShopping={handleContinueShopping} />
+
             )}
         </div>
 
